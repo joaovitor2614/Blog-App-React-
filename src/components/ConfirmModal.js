@@ -10,7 +10,7 @@ const ConfirmModal = (props) => (
         closeTimeoutMS={200}
         className='modal'
     >
-        <p className='modal-text page-header__title'> Tem certeza que deseja excluir o seguinte post: <span>{props.selectedPost}</span></p>
+        <p className='modal-text page-header__title'> Tem certeza que deseja excluir esse post?</p>
         <div className='modal-button'>
             <div className='content-container'>
                 <button className='button button--secondary button--modal' onClick={props.removePost}>Excluir</button>
@@ -24,9 +24,6 @@ const ConfirmModal = (props) => (
     </Modal>
 
 )
-const mapDispatchToProps = (dispatch) => ({
 
-
-})
 export default ConfirmModal
 

@@ -16,7 +16,7 @@ const PostList = (props) => (
                     <p className='list-item--message'>Nenhum post adicionado</p>
                 ) : (
                         props.posts.map((post) => {
-                            return <PostItem key={post.id} {...post} />
+                            return <PostItem key={post.id} {...post} id={post.id} />
                         })
                     )
             }

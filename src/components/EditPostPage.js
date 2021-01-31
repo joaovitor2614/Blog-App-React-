@@ -3,7 +3,7 @@ import { startEditPost, startRemovePost } from '../actions/posts'
 import { connect } from 'react-redux'
 import PostForm from './PostForm'
 import ConfirmModal from './ConfirmModal'
-import selectPostTitle from '../selectors/post-title'
+
 
 export class EditPostPage extends React.Component {
     state = {
@@ -21,9 +21,9 @@ export class EditPostPage extends React.Component {
     }
 
     onOpenModal = (posts, post) => {
-        const selectedTitle = selectPostTitle(this.props.posts, this.props.post.id)
-        const { title } = post
-        this.setState(() => ({ selectedPost: selectedTitle }))
+
+
+        this.setState(() => ({ selectedPost: 'a' }))
         this.setState(() => ({ postId: this.props.post.id }))
     }
     onCancelRemove = () => {
@@ -60,8 +60,8 @@ export class EditPostPage extends React.Component {
 }
 
 const mapStateToProps = (state, props) => ({
-    post: state.posts.find((post) => post.id === props.match.params.id),
-    posts: state.posts
+    post: state.posts.find((post) => post.id === props.match.params.id)
+
 
 })
 
